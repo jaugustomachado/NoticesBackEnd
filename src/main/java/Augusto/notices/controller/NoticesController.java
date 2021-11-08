@@ -18,7 +18,7 @@ public class NoticesController {
         this.noticesService = noticesService;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
+    @CrossOrigin(origins = {"http://localhost:4200"})
     @GetMapping({ "", "/" })
     @ResponseStatus(HttpStatus.OK)
     public @ResponseBody List<Notices> list(@RequestParam(required = false) final String title) {
